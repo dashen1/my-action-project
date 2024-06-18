@@ -1,0 +1,25 @@
+name: Daily News Scraper
+
+on:
+  schedule:
+    - cron: '15 15 * * *'  # 每天凌晨0点触发（UTC时间）
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4
+
+    - name: Run scraper
+      run: python scraper.py
