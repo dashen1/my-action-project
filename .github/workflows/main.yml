@@ -22,4 +22,4 @@ jobs:
         pip install requests BeautifulSoup
 
     - name: Run scraper
-      run: python scraper.py
+      run: python web.py
