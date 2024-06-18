@@ -1,0 +1,17 @@
+name: Delayed Execution
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  delayed-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Delay for 5 minutes
+      run: |
+        echo "Waiting for 1 minutes..."
+        sleep 60 # 睡眠60秒，即5分钟
+
+    - name: Actual Task
+      run: echo "Task is running now, 5 minutes after the job started."

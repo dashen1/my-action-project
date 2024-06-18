@@ -2,7 +2,7 @@ name: Daily Job at 1am
 
 on:
   schedule:
-    - cron: '22 22 * * *' # 每天凌晨1点执行（UTC时间）
+    - cron: '22 22 * * *' # 每天执行（UTC时间）
 
 jobs:
   daily-task:
