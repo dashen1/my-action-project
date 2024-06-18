@@ -2,7 +2,7 @@ name: Daily News Scraper
 
 on:
   schedule:
-    - cron: '15 15 * * *'  # 每天凌晨0点触发（UTC时间）
+    - cron: '15 20 * * *'  # 每天凌晨0点触发（UTC时间）
 
 jobs:
   scrape:
